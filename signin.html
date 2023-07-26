@@ -11,40 +11,26 @@
   <div class="container">
     <div class="form-wrapper">
       <div class="circle-image"></div> <!-- Circle image will be added here -->
-      <form action="login.php" method="POST">
+      <form action="login" method="POST" onsubmit="return validateForm()">
         <div class="input-wrapper">
-          <i class="bi bi-person"></i> <!-- Username icon -->
+          <i class="bi bi-person-badge-fill"></i> <!-- Username icon -->
           <input type="text" id="username" name="username" placeholder="Username" required>
         </div>
         <div class="input-wrapper">
-            <i class="bi bi-lock-fill"></i> <!-- Password icon -->
+          <i class="bi bi-file-lock-fill"></i> <!-- Password icon -->
           <input type="password" id="password" name="password" placeholder="Password" required>
-       
+          
           <span class="show-password-icon" onclick="togglePasswordVisibility()">
             <i class="bi bi-eye"></i> <!-- Eye symbol icon (Bootstrap) -->
             <i class="bi bi-eye-slash"></i>
-        </span>
-       
-       
+          </span>
         </div>
         <button type="submit">Login</button>
       </form>
     </div>
   </div>
   
-<script>
-    function togglePasswordVisibility() {
-        const passwordInput = document.getElementById("password");
-        const showPasswordIcon = document.querySelector(".show-password-icon");
-      
-        if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          passwordInput.classList.add("visible"); // Add class to track visibility state
-        } else {
-          passwordInput.type = "password";
-          passwordInput.classList.remove("visible"); // Remove class when hiding password
-        }
-      }
-  </script>
+  <!-- Your existing JavaScript code here -->
+  <script src="js/index.js"></script>
 </body>
 </html>

@@ -33,13 +33,15 @@ html, body {
     overflow: hidden;
     position: relative;
   display: inline-block;
-  animation: h3 2s infinite;
+   border-color: black;
+  /**animation: h3 2s infinite;*//
   }
   
   h3:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
     transform: scale(1.1); /* Increase the size of the box on hover */
     background-color: cornflowerblue;
+    border-color: black;
   }
   
 
