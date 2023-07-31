@@ -19,6 +19,23 @@ html, body {
     flex-direction: column;
     align-items: center;
   }
+
+.custom-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px; /* Adjust the size of the cursor */
+    height: 24px;
+    border-radius: 50%;
+    background-color: #000; /* Set the cursor color */
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease;
+    z-index: 9999; /* Make sure it's on top of other elements */
+     }
+
+
+
   
   h1.top {
     margin-top: 100px; /* Add some top margin to the h1 element */

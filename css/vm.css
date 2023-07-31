@@ -1,0 +1,153 @@
+body {
+   
+  margin: 0;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block; /* Make labels stack vertically */
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+select {
+  height: 36px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#userList {
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+#userList label {
+  font-weight: normal;
+}
+
+#userList input[type="text"] {
+  margin-top: 5px; /* Add some spacing between user input fields */
+}
+
+
+select {
+  height: 36px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #ddd;
+}
+
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+/* Style for the user list and flavour section */
+#userList,
+#flavourSection {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.flavour-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.flavour-table th,
+.flavour-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.flavour-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.flavour-table select {
+  width: 100px;
+  padding: 5px;
+}
+
+ 

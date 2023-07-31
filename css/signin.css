@@ -9,7 +9,18 @@ body{
   min-height: 100vh;
   background-color: #5998f1;
   background-size: cover; /* Use 'cover' to fill the entire container */
+  max-width: 100%;
 }
+
+.required-message {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: red;
+}
+ 
+
+
 
 .form-wrapper {
   text-align: center;
@@ -24,7 +35,7 @@ body{
 .circle-image {
   width: 100px;
   height: 100px;
-  background-image: url(images/cdac.jpg);
+  background-image: url(/images/cdac.jpg);
   background-size: cover; /* Use 'cover' to fill the entire circle */
   border-radius: 50%;
   margin: 0 auto 20px;
@@ -34,34 +45,73 @@ body{
 .input-wrapper {
   position: relative;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.input-icon {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  left: 50px; /* Adjust the value to control the space between the icon and the input field */
+  color: #666666;
 }
 
 .input-wrapper input {
-  padding: 15px;
-  width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
+  font-size: 15px;
+  line-height: 1.5;
+  color: black;
+  display: block;
+  width: 50%;
+  background: white;
+  height: 50px;
+  border: 2px solid #cccccc;
+  border-radius: 25px;
+  padding-left: 45px; /* Adjust the value to control the space between the icon and the input text */
 }
 
 .input-wrapper i {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
   position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  color: #333;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  padding-left: 35px;
+  pointer-events: none;
+  color: #666666;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
+
+.input-wrapper input:focus {
+  outline: none; /* Remove the default outline on focus (optional) */
+  box-shadow: 0 0 50px #5998f1; /* Add the box-shadow when the input is in focus */
+  transition: box-shadow 0.3s ease; /* Add a smooth transition for the box-shadow change */
+}
+
 
 .bi-person-badge-fill:before, .bi-file-lock-fill:before {
   font-family: "Bootstrap Icons";
   font-weight: 900;
 }
 
-
 .show-password-icon {
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 12px; /* Adjust the value to control the space between the icon and the input field */
   transform: translateY(-50%);
   cursor: pointer;
 }
@@ -71,11 +121,11 @@ body{
 }
 
 input[type="text"].visible ~ .show-password-icon i.bi-eye-slash {
-  display: block; /* Show the crossed-out eye icon when password is visible */
+  display: block; /* Show the crossed-out eye icon when the password is visible */
 }
 
 input[type="password"].visible ~ .show-password-icon i.bi-eye {
-  display: none; /* Hide the open eye icon when password is visible */
+  display: none; /* Hide the open eye icon when the password is visible */
 }
 
 button[type="submit"] {
