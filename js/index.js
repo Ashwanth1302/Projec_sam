@@ -55,7 +55,6 @@ function validateForm() {
 document.addEventListener("DOMContentLoaded", function () {
   const vmForm = document.getElementById("vmForm");
   const userListDiv = document.getElementById("userList");
-  const flavourSectionDiv = document.getElementById("flavourSection");
   const maxUsers = 5;
 
   // Add an event listener for the input field to update the user list
@@ -86,86 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       userListDiv.appendChild(userDiv);
     }
-
-    // Populate the flavour section
-    populateFlavourSection();
-  }
-
-  // Function to populate the flavour section
-  function populateFlavourSection() {
-    const flavours = [
-      { vCPU: "1", disk: "1 GB", ram: "512 MB" },
-      { vCPU: "1", disk: "20 GB", ram: "512 MB" },
-      { vCPU: "2", disk: "40 GB", ram: "2048 MB" },
-      { vCPU: "4", disk: "80 GB", ram: "4096 MB" },
-      { vCPU: "8", disk: "160 GB", ram: "8192 MB" },
-    ];
-
-    // Clear existing content in the flavour section
-    flavourSectionDiv.innerHTML = '';
-    const heading = document.createElement("h5");
-    heading.textContent = "Flavour";
-    flavourSectionDiv.appendChild(heading);
-
-    // Create and append new flavour table
-    const flavourTable = document.createElement("table");
-    flavourTable.className = "flavour-table";
-
-    // Create header row
-    const headerRow = document.createElement("tr");
-    const headers = ["User", "vCPU", "Disk", "RAM"];
-    headers.forEach((headerText) => {
-      const headingCell = document.createElement("th");
-      headingCell.textContent = headerText;
-      headerRow.appendChild(headingCell);
-    });
-    flavourTable.appendChild(headerRow);
-
-    // Create data rows for each user flavour
-    const userDivs = userListDiv.querySelectorAll("div");
-    userDivs.forEach((userDiv, index) => {
-      const userRow = document.createElement("tr");
-
-      // User cell
-      const userCell = document.createElement("td");
-      userCell.textContent = `User ${index + 1}`;
-      userRow.appendChild(userCell);
-
-      // vCPU cell
-      const vcpuCell = document.createElement("td");
-      const vcpuSelect = createSelect("vcpu", flavours.map((flavor) => flavor.vCPU));
-      vcpuCell.appendChild(vcpuSelect);
-      userRow.appendChild(vcpuCell);
-
-      // Disk cell
-      const diskCell = document.createElement("td");
-      const diskSelect = createSelect("disk", flavours.map((flavor) => flavor.disk));
-      diskCell.appendChild(diskSelect);
-      userRow.appendChild(diskCell);
-
-      // RAM cell
-      const ramCell = document.createElement("td");
-      const ramSelect = createSelect("ram", flavours.map((flavor) => flavor.ram));
-      ramCell.appendChild(ramSelect);
-      userRow.appendChild(ramCell);
-
-      flavourTable.appendChild(userRow);
-    });
-
-    // Append the flavour table to the flavour section
-    flavourSectionDiv.appendChild(flavourTable);
-  }
-
-  // Function to create the select dropdown
-  function createSelect(name, optionsArray) {
-    const select = document.createElement("select");
-    select.name = name;
-    optionsArray.forEach((optionText) => {
-      const option = document.createElement("option");
-      option.textContent = optionText;
-      select.appendChild(option);
-    });
-    return select;
   }
 
   // Add an event listener for the form submission
@@ -177,6 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.reload();
   });
 });
+
+ 
+
+
+
 
 
 

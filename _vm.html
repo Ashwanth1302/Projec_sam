@@ -28,14 +28,21 @@
             <!-- User list will be dynamically populated here -->
         </div>
 
-        <div id="flavourSection">
-            <!-- Flavour section will be dynamically populated here -->
-            <h5>Flavour</h5>
-        </div>
+        <div class="custom-select">
+          <label for="flavour">Flavour:</label>
+          <select id="flavour" name="flavour" required>
+              <option value="">Select Flavor</option>
+              <option value="m1.tiny">m1.tiny: 1 VCPUs | 1GB Disk | 512MB RAM</option>
+              <option value="m1.small">m1.small: vCPUs 1 | Disk 20GB | RAM 2048MB</option>
+              <option value="m1.medium">m1.medium: vCPUs 2 | Disk 40GB | RAM 4096MB</option>
+              <option value="m1.large">m1.large: vCPUs 4 | Disk 80GB | RAM 8192MB</option>
+              <option value="m1.xlarge">m1.xlarge: vCPUs 8 | Disk 160GB | RAM 16384MB</option>
+          </select>
+      </div>
+        
 
-        <div>
-            <label for="duration">Duration (in days):</label>
-            <input type="number" id="duration" name="duration" required>
+        <label for="duration">Duration (in days):</label>
+        <input type="number" id="duration" name="duration" required>
         </div>
         <div>
             <label for="fileUpload">Upload File:</label>
